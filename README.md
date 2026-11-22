@@ -27,7 +27,7 @@ I'm a **Full Stack Developer** from Hyderabad, Pakistan. I build complete web ap
 
 <img src="https://skillicons.dev/icons?i=nodejs,express,python,mongodb,postgres,supabase,sqlite" alt="Node.js, Express, Python, MongoDB, PostgreSQL, Supabase, SQLite">
 
-**AI & integration:** LLM APIs (Google Gemini, Groq) · retrieval over custom data · REST APIs · JWT authentication
+**AI & integration:** LLM APIs (Google Gemini, Groq, OpenAI) · n8n workflow automation · retrieval over custom data · REST APIs · JWT authentication
 
 **Tools**
 
@@ -58,6 +58,54 @@ It tracks leads from New to Won, converts them into clients, schedules follow-up
 Students can search the catalogue, reserve books, join a waitlist that promotes them automatically (with an email alert) when a copy is returned, renew books and download e-books. Librarians manage books, issues, returns and fines, with analytics and CSV export. Integration tests use Jest and Supertest.
 
 `React` `Node.js` `Express` `SQLite` `Jest`
+
+## 🤖 AI Automation & n8n Workflows
+
+Beyond full-stack apps, I build automations in **n8n** that connect email, AI models and web services.
+
+### AI-Powered Email Draft Automation (Orders & Inquiries)
+**Reads new emails, sorts them as orders or inquiries, and drafts a reply for each one.**
+A Gmail trigger picks up each incoming email. A Text Classifier using an OpenAI chat model decides whether it is an **order** or an **inquiry**, and an OpenAI model writes a reply suited to that type. The reply is saved as a **Gmail draft**, not sent, so a person can check and edit it before it goes out.
+
+<p align="center">
+  <img src="./assets/n8n/email-draft-workflow.webp" alt="n8n workflow: Gmail Trigger, Text Classifier with OpenAI Chat Model, Order and Inquiry branches with OpenAI replies, and Gmail Create a draft" width="100%">
+</p>
+
+<table>
+  <tr>
+    <th>Incoming email</th>
+    <th>Draft created by the workflow</th>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><img src="./assets/n8n/email-order-request.webp" alt="Test email asking to order a pizza with extra ketchup and asking for the price and delivery time" width="360"></td>
+    <td align="center" valign="top"><img src="./assets/n8n/email-ai-draft-reply.webp" alt="AI-generated draft reply to the pizza order email, saved in Gmail for review" width="360"></td>
+  </tr>
+</table>
+
+`n8n` `Gmail` `OpenAI` `Text Classifier`
+
+### Website Error Detection
+**A scheduled website availability check that emails an alert when the site does not respond correctly.**
+A Schedule Trigger starts the check, an HTTP Request calls the website URL, and an If node checks the result. When the site is available, the workflow only records its status. When it is not, it marks the site as offline and sends an alert email through Gmail. The offline path was tested using an endpoint that returns **HTTP 503**.
+
+<p align="center">
+  <img src="./assets/n8n/website-error-detection-workflow.webp" alt="n8n workflow: Schedule Trigger, Edit Fields, HTTP Request to a test URL returning 503, If node, and Gmail alert on the offline branch" width="100%">
+</p>
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="50%"><img src="./assets/n8n/website-down-alert.webp" alt="Website Down Alert email received from the n8n workflow during the HTTP 503 test" width="360"></td>
+    <td valign="top">
+      <b>What happens in the test</b><br><br>
+      1. The schedule starts the check.<br>
+      2. The HTTP request receives a 503 response.<br>
+      3. The If node sends it down the offline path.<br>
+      4. Gmail sends the <i>Website Down Alert!</i> email shown here.
+    </td>
+  </tr>
+</table>
+
+`n8n` `HTTP Request` `Gmail` `Schedule Trigger`
 
 ## 📫 Let's work together
 
