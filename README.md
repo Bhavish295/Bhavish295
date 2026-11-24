@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://bhavishkumar-portfolio.netlify.app/">Portfolio</a> ·
-  <a href="https://www.linkedin.com/in/bhavish-kumar-ab40a9303">LinkedIn</a> ·
+  <a href="https://www.linkedin.com/in/bhavish295">LinkedIn</a> ·
   <a href="mailto:bhavishkumar799@gmail.com">Email</a>
   <!-- · <a href="UPWORK_URL">Upwork</a> · <a href="FIVERR_URL">Fiverr</a> -->
 </p>
@@ -110,4 +110,4 @@ A Schedule Trigger starts the check, an HTTP Request calls the website URL, and 
 ## 📫 Let's work together
 
 I'm available for **remote junior developer roles** and **freelance projects**, including web apps, REST APIs, dashboards and AI chatbots.
-The best way to reach me is by [email](mailto:bhavishkumar799@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/bhavish-kumar-ab40a9303).
+The best way to reach me is by [email](mailto:bhavishkumar799@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/bhavish295).
