@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://bhavishkumar-portfolio.netlify.app/">Portfolio</a> ·
+  <a href="https://bhavish-kumar-portfolio.netlify.app/">Portfolio</a> ·
   <a href="https://www.linkedin.com/in/bhavish-kumaar">LinkedIn</a> ·
   <a href="mailto:bhavishkumar799@gmail.com">Email</a>
   <!-- · <a href="UPWORK_URL">Upwork</a> · <a href="FIVERR_URL">Fiverr</a> -->
